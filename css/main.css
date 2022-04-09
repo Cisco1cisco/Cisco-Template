@@ -3,7 +3,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
-    --trans-dur: 0.3s;
+    --trans-dur: 0.5s;
 }
 
 /* End Variables */
@@ -63,6 +63,69 @@ a {
 /* End Global Rules */
 
 /* Start Component */
+
+h2.main-title {
+    text-transform: uppercase;
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--trans-dur, 0.5s);
+    -webkit-transition: var(--trans-dur, 0.5s);
+    -moz-transition: var(--trans-dur, 0.5s);
+    -ms-transition: var(--trans-dur, 0.5s);
+    -o-transition: var(--trans-dur, 0.5s);
+}
+
+h2.main-title:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+
+h2.main-title::before,
+h2.main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color, #2196f3);
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+h2.main-title::before {
+    left: -30px;
+}
+
+h2.main-title:hover:before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+    -webkit-animation: left-move 0.5s linear forwards;
+}
+
+h2.main-title::after {
+    right: -30px;
+}
+
+h2.main-title:hover:after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+    -webkit-animation: right-move 0.5s linear forwards;
+}
+
 /* End Component */
 
 /* Start Header */
@@ -401,6 +464,44 @@ header .container .main-nav li .mega-menu .links li a {
         -moz-transform: translateY(-15px);
         -ms-transform: translateY(-15px);
         -o-transform: translateY(-15px);
+    }
+}
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        left: 0;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        right: 0;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
     }
 }
 
