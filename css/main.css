@@ -812,6 +812,140 @@ header .container .main-nav li .mega-menu .links li a {
 
 /* End Testimonials */
 
+/* Start Team */
+
+.team {
+    padding-top: var(--section-padding, 100px);
+    padding-bottom: var(--section-padding, 100px);
+    position: relative;
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team .container .box {
+    position: relative;
+}
+
+.team .container .box::before,
+.team .container .box:after {
+    content: "";
+    background-color: #f3f3f3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: var(--trans-dur, 0.3s);
+    -webkit-transition: var(--trans-dur, 0.3s);
+    -moz-transition: var(--trans-dur, 0.3s);
+    -ms-transition: var(--trans-dur, 0.3s);
+    -o-transition: var(--trans-dur, 0.3s);
+}
+
+.team .container .box::before {
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+
+.team .container .box::after {
+    width: 0;
+    z-index: -1;
+    background-color: #e4e4e4;
+}
+
+.team .container .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team .container .box .data {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.team .container .box .data img {
+    width: calc(100% - 60px);
+    transition: var(--trans-dur, 0.3s);
+    -webkit-transition: var(--trans-dur, 0.3s);
+    -moz-transition: var(--trans-dur, 0.3s);
+    -ms-transition: var(--trans-dur, 0.3s);
+    -o-transition: var(--trans-dur, 0.3s);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.team .container .box:hover .data img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.team .container .box .data .social {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.team .container .box .data .social a {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team .container .box .data .social a i {
+    color: #777;
+    transition: var(--trans-dur, 0.3s);
+    -webkit-transition: var(--trans-dur, 0.3s);
+    -moz-transition: var(--trans-dur, 0.3s);
+    -ms-transition: var(--trans-dur, 0.3s);
+    -o-transition: var(--trans-dur, 0.3s);
+}
+
+.team .container .box .data .social a:hover i {
+    color: var(--main-color, #2196f3);
+}
+
+.team .container .box .info {
+    padding-left: 80px;
+}
+
+.team .container .box .info h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: var(--main-color, #2196f3);
+    font-size: 22px;
+    transition: var(--trans-dur, 0.3s);
+    -webkit-transition: var(--trans-dur, 0.3s);
+    -moz-transition: var(--trans-dur, 0.3s);
+    -ms-transition: var(--trans-dur, 0.3s);
+    -o-transition: var(--trans-dur, 0.3s);
+}
+
+.team .container .box:hover .info h3 {
+    color: #777;
+}
+
+.team .container .box .info p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* End Team */
+
 /* Start Animation */
 
 @keyframes up-and-down {
