@@ -1040,7 +1040,7 @@ header .container .main-nav li .mega-menu .links li a {
     justify-content: center;
     align-items: center;
     padding-right: 15px;
-    content: "0"counter(services);
+    content: "0" counter(services);
 }
 
 .services .container .box .info::after {
@@ -1063,6 +1063,64 @@ header .container .main-nav li .mega-menu .links li a {
 }
 
 /* End Services */
+
+/* Start Our Skills */
+
+.our-skills {
+    padding-top: var(--section-padding, 50px);
+    padding-bottom: var(--section-padding, 50px);
+    position: relative;
+}
+
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .our-skills .container img {
+        display: none;
+    }
+}
+
+.our-skills .container .skills {
+    flex: 1;
+}
+
+.our-skills .container .skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 19px 0;
+}
+
+.our-skills .container .skills .skill h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    color: var(--main-color, #2196f3);
+}
+
+.our-skills .container .skills .skill .the-progress {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.our-skills .container .skills .skill .the-progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color, #2196f3);
+}
+
+/* End Our Skills */
 
 /* Start Animation */
 
