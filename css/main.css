@@ -1590,6 +1590,86 @@ header .container .main-nav li .mega-menu .links li a {
 
 /* End Pricing */
 
+/* Start Top Videos */
+
+.videos {
+    padding-top: var(--section-padding, 50px);
+    padding-bottom: var(--section-padding, 50px);
+}
+
+.videos .container .holder {
+    display: flex;
+    justify-content: center;
+    background-color: var(--section-background, #ececec);
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 991px) {
+    .videos .container .holder {
+        flex-direction: column;
+    }
+}
+
+.videos .container .holder .list {
+    min-width: 300px;
+    background-color: white;
+}
+
+.videos .container .holder .list .name {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: var(--main-color, #2196f3);
+}
+
+.videos .container .holder .list .name i {
+    cursor: pointer;
+}
+
+.videos .container .holder .list ul li {
+    padding: 20px;
+    border-top: 1px solid var(--section-background, #ececec);
+    cursor: pointer;
+    transition: var(--trans-dur, 0.3s);
+    -webkit-transition: var(--trans-dur, 0.3s);
+    -moz-transition: var(--trans-dur, 0.3s);
+    -ms-transition: var(--trans-dur, 0.3s);
+    -o-transition: var(--trans-dur, 0.3s);
+}
+
+.videos .container .holder .list ul li:hover {
+    background-color: #fafafa;
+    color: var(--main-color, #2196f3);
+}
+
+.videos .container .holder .list ul li span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+.videos .container .holder .preview {
+    background-color: #e2e2e2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.videos .container .holder .preview img {
+    max-width: 100%;
+}
+
+.videos .container .holder .preview .info {
+    padding: 20px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+/* End Top Videos */
+
 /* Start Animation */
 
 @keyframes up-and-down {
